@@ -14,20 +14,24 @@ public class CheckFromWeek {
         String payPerMonth;
         String downPayment;
         String tradeInValue;
-        String dueAtSigning;
+        String worthIt;
+
         int weekBonus;
         int unionFees;
         int Hours;
         int amountSaving;
         int yesOrNoStatement;
         int yesOrNoStatementTwo;
+
         double Cash;
         double Tax;
         double beforeTax;
         double afterTax;
         double timeOfSaving;
+        double dueAtSigning;
 
         Scanner keyboard = new Scanner(System.in);
+
         weekBonus = 116;
         unionFees = 30;
 
@@ -129,13 +133,18 @@ public class CheckFromWeek {
             downPayment = keyboard.nextLine();
             System.out.println("What's the value of the trade in if any?");
             tradeInValue = keyboard.nextLine();
-            System.out.println("How much is due at signing?");
-            dueAtSigning = keyboard.nextLine();
 
-            String worthIt;
 
             int payPerMonthCompare;
             payPerMonthCompare = Integer.parseInt(payPerMonth);
+
+            int payPerMonthAddition;
+            int downPaymentAddition;
+            int tradeInValueAddition;
+            payPerMonthAddition = Integer.parseInt(payPerMonth);
+            downPaymentAddition = Integer.parseInt(downPayment);
+            tradeInValueAddition = Integer.parseInt(tradeInValue);
+            dueAtSigning = payPerMonthAddition + downPaymentAddition + tradeInValueAddition;
 
             System.out.println("+---------------------------+");
             System.out.println("|        Car Payment        |");
@@ -148,12 +157,12 @@ public class CheckFromWeek {
             System.out.println("| Car Year: " + carYear + "            |");
             System.out.println("| Term of Lease: " + termOfLease + " months  |");
             System.out.println("| Pay Per Month: $" + payPerMonth + "/month |");
-            System.out.println("| Down Payment: $" + downPayment + "          |");
+            System.out.println("| Down Payment: $" + downPayment + "        |");
             System.out.println("| Trade-in Value: $" + tradeInValue + "        |");
-            System.out.println("| Due at Signing: $" + dueAtSigning + "      |");
-            if(payPerMonthCompare > roundOffAT*4) {
-                System.out.println("| Worth It?: No         |");
-            } else if(payPerMonthCompare < roundOffAT*4) {
+            System.out.println("| Due at Signing: $" + dueAtSigning + "   |");
+            if(payPerMonthCompare > roundOffAT*2) {
+                System.out.println("| Worth It?: No             |");
+            } else if(payPerMonthCompare < roundOffAT*2) {
                 System.out.println("| Worth It?: Yes            |");
             }
             System.out.println("+---------------------------+");
