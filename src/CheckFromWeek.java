@@ -14,7 +14,6 @@ public class CheckFromWeek {
         String payPerMonth;
         String downPayment;
         String tradeInValue;
-        String worthIt;
 
         int weekBonus;
         int unionFees;
@@ -35,17 +34,17 @@ public class CheckFromWeek {
         weekBonus = 116;
         unionFees = 30;
 
-        System.out.println("+-----------------------+");
-        System.out.println("|    Check Calculator   |");
-        System.out.println("+-----------------------+");
-        System.out.println("| Name: Brandon Woolard |");
-        System.out.println("| Job: UPS              |");
-        System.out.println("| Hours Worked:         |");
-        System.out.println("| Before Tax:           |");
-        System.out.println("| Tax:                  |");
-        System.out.println("| Union Fees:           |");
-        System.out.println("| After Taxes:          |");
-        System.out.println("+-----------------------+");
+        System.out.println("+-----------------------------+");
+        System.out.println("|       Check Calculator      |");
+        System.out.println("+-----------------------------+");
+        System.out.println("| Name: Brandon Woolard       |");
+        System.out.println("| Job: UPS                    |");
+        System.out.println("| Hours Worked:               |");
+        System.out.println("| Before Tax:                 |");
+        System.out.println("| Tax:                        |");
+        System.out.println("| Union Fees:                 |");
+        System.out.println("| After Taxes:                |");
+        System.out.println("+-----------------------------+");
 
         System.out.println("Hours worked this week?");
         initialHours = keyboard.nextLine();
@@ -60,35 +59,42 @@ public class CheckFromWeek {
         double roundOffTax = Math.round(Tax * 100) / 100;
         double roundOffAT = Math.round(afterTax*100)/100;
 
-        System.out.println("+-----------------------+");
-        System.out.println("|    Check Calculator   |");
-        System.out.println("+-----------------------+");
-        System.out.println("| Name: Brandon Woolard |");
-        System.out.println("| Job: UPS              |");
-        System.out.println("| Hours Worked: " + Hours + " hours|");
-        System.out.println("| Before Tax: $" + roundOffBT + "    |");
-        System.out.println("| Tax: -$" + roundOffTax + "           |");
-        System.out.println("| Union Fees: -$" + unionFees + "      |");
-        System.out.println("| After Taxes: $" + roundOffAT + "   |");
-        System.out.println("+-----------------------+");
+        System.out.println("+-----------------------------+");
+        System.out.println("|       Check Calculator      |");
+        System.out.println("+-----------------------------+");
+        System.out.println("| Name: Brandon Woolard       |");
+        System.out.println("| Job: UPS                    |");
+        System.out.println("| Hours Worked: " + Hours + " hours      |");
+        System.out.println("| Before Tax: $" + roundOffBT + "          |");
+        System.out.println("| Tax: -$" + roundOffTax + "                 |");
+        System.out.println("| Union Fees: -$" + unionFees + "            |");
+        System.out.println("| After Taxes: $" + roundOffAT + "         |");
+        System.out.println("+-----------------------------+");
 
         System.out.println("Press 1 to open the Time of Saving Calculator\nPress 0 to open the Car Payment Options Calculator");
         yesOrNo = keyboard.nextLine();
         yesOrNoStatement = Integer.parseInt(yesOrNo);
         if(yesOrNoStatement == 1){
+            System.out.println("+-------------------------+");
+            System.out.println("|     Time of Saving      |");
+            System.out.println("+-------------------------+");
+            System.out.println("| Wanted Amount:          |");
+            System.out.println("| Weekly Amount: $" + roundOffAT + "   |");
+            System.out.println("| Weeks:                  |");
+            System.out.println("+-------------------------+");
             System.out.println("Enter a price to see how long it will take to reach it.");
             amountWanted = keyboard.nextLine();
             amountSaving = Integer.parseInt(amountWanted);
             timeOfSaving = amountSaving / roundOffAT;
             double roundOffTOF = Math.round(timeOfSaving * 100) / 100;
 
-            System.out.println("+-----------------------+");
-            System.out.println("|    Time of Saving     |");
-            System.out.println("+-----------------------+");
-            System.out.println("| Wanted Amount: $" + amountWanted + "  |");
-            System.out.println("| Weekly Amount: $" + roundOffAT + " |");
-            System.out.println("| Weeks: " + roundOffTOF + "            |");
-            System.out.println("+-----------------------+");
+            System.out.println("+-------------------------+");
+            System.out.println("|     Time of Saving      |");
+            System.out.println("+-------------------------+");
+            System.out.println("| Wanted Amount: $" + amountWanted + "    |");
+            System.out.println("| Weekly Amount: $" + roundOffAT + "   |");
+            System.out.println("| Weeks: " + roundOffTOF + "              |");
+            System.out.println("+-------------------------+");
             System.out.println(" ");
             System.out.println("Press 1 to open the Car Payment Options Calculator\nPress 0 to close the program");
         }
@@ -153,7 +159,7 @@ public class CheckFromWeek {
             System.out.println("| Monthly Income: $" + roundOffAT*4 + "   |");
             System.out.println("| Car Company: " + carCompany + "        |");
             System.out.println("| Car Model: " + carModel + "          |");
-            System.out.println("| Car Make: " + carMake + "           |");
+            System.out.println("| Car Make: " + carMake + "              |");
             System.out.println("| Car Year: " + carYear + "            |");
             System.out.println("| Term of Lease: " + termOfLease + " months  |");
             System.out.println("| Pay Per Month: $" + payPerMonth + "/month |");
