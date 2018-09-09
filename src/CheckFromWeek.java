@@ -140,7 +140,6 @@ public class CheckFromWeek {
             System.out.println("What's the value of the trade in if any?");
             tradeInValue = keyboard.nextLine();
 
-
             int payPerMonthCompare;
             payPerMonthCompare = Integer.parseInt(payPerMonth);
 
