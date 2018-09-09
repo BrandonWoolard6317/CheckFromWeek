@@ -115,7 +115,7 @@ public class CheckFromWeek {
             System.out.println("| Car Model:                |");
             System.out.println("| Car Make:                 |");
             System.out.println("| Car Year:                 |");
-            System.out.println("| Term of Lease:            |");
+            System.out.println("| Term of Payment:          |");
             System.out.println("| Pay Per Month:            |");
             System.out.println("| Down Payment:             |");
             System.out.println("| Trade-in Value:           |");
@@ -131,7 +131,7 @@ public class CheckFromWeek {
             carMake = keyboard.nextLine();
             System.out.println("Car Year?");
             carYear = keyboard.nextLine();
-            System.out.println("How long's the term of lease?");
+            System.out.println("How long's the term of the payment?");
             termOfLease = keyboard.nextLine();
             System.out.println("How much would you pay per month?");
             payPerMonth = keyboard.nextLine();
@@ -161,7 +161,7 @@ public class CheckFromWeek {
             System.out.println("| Car Model: " + carModel + "          |");
             System.out.println("| Car Make: " + carMake + "              |");
             System.out.println("| Car Year: " + carYear + "            |");
-            System.out.println("| Term of Lease: " + termOfLease + " months  |");
+            System.out.println("| Term of Payment: " + termOfLease + " months|");
             System.out.println("| Pay Per Month: $" + payPerMonth + "/month |");
             System.out.println("| Down Payment: $" + downPayment + "        |");
             System.out.println("| Trade-in Value: $" + tradeInValue + "        |");
