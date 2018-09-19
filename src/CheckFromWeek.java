@@ -23,7 +23,11 @@ public class CheckFromWeek {
         int yesOrNoStatementTwo;
 
         double Cash;
-        double Tax;
+        double Tax1;
+        double Tax2;
+        double Tax3;
+        double Tax4;
+        double Tax5;
         double beforeTax;
         double afterTax;
         double timeOfSaving;
@@ -31,7 +35,7 @@ public class CheckFromWeek {
 
         Scanner keyboard = new Scanner(System.in);
 
-        weekBonus = 116;
+        weekBonus = 200;
         unionFees = 30;
 
         System.out.println("+-----------------------------+");
@@ -51,12 +55,17 @@ public class CheckFromWeek {
         Hours = Integer.parseInt(initialHours);
 
         Cash = (Hours * 10.35);
-        Tax = (Cash * 0.0575);
+        Tax1 = (Cash * 0.061998092366389);
+        Tax2 = (Cash * 0.014522630072921);
+        Tax3 = (Cash * 0.121042429463709);
+        Tax4 = (Cash * 0.017722531614412);
+        Tax5 = (Cash * 0.025014614934925);
+        totalTax = (Tax1+Tax2+Tax3+Tax4+Tax5);
         beforeTax = Cash + weekBonus;
-        afterTax = (beforeTax - Tax) - unionFees;
+        afterTax = (beforeTax - totalTax) - unionFees;
 
         double roundOffBT = Math.round(beforeTax * 100) /100;
-        double roundOffTax = Math.round(Tax * 100) / 100;
+        double roundOffTax = Math.round(totalTax * 100) / 100;
         double roundOffAT = Math.round(afterTax*100)/100;
 
         System.out.println("+-----------------------------+");
